@@ -23,10 +23,12 @@ headerH2.addEventListener("mouseout", (event) => {
 // 5. Change nav link to serif on mousedown
 const navLink = document.querySelector("a");
 navLink.addEventListener("mousedown", (event) => {
+    event.stopPropagation();
     navLink.style.fontFamily = "serif";
 });
 // 6. Change nav link to sans-serif on mouseup
 navLink.addEventListener("mouseup", (event) => {
+    event.stopPropagation();
     navLink.style.fontFamily = "sans-serif";
 });
 // 7. 
@@ -34,7 +36,6 @@ navLink.addEventListener("click", (event) => {
     navLink.style.background = "purple";
     navLink.style.color = "white";
 });
-
 
 // 8. Alert & hide image on dblclick
 const image = document.querySelector("div header img");
@@ -50,13 +51,16 @@ para.addEventListener('copy', (event) => {
 })
 
 // 10. 
-const webpage = document.querySelector("body");
-webpage.addEventListener("scroll", (event) => {
-    webpage.style.background = "black";
-})
+
 
 // Stop propagation
-
+const nav = document.querySelector("nav");
+nav.addEventListener("mousedown", (event) => {
+    nav.style.backgroundColor = "blue";
+});
+nav.addEventListener("mouseup", (event) => {
+    nav.style.backgroundColor = "white";
+});
 
 // Prevent default
 navLink.addEventListener("click", (event) => {
