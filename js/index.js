@@ -5,7 +5,7 @@ const headerH1 = document.querySelector("h1");
 headerH1.addEventListener("mouseenter", (event) => {
     headerH1.style.color = "red";
 });
-// 2. Change h1 font family on mouseleave
+// 2. Change h1 color on mouseleave
 headerH1.addEventListener("mouseleave", (event) => {
     headerH1.style.color = "black";
 });
@@ -31,7 +31,7 @@ navLink.addEventListener("mouseup", (event) => {
     event.stopPropagation();
     navLink.style.fontFamily = "sans-serif";
 });
-// 7. 
+// 7. Change background and text color on click
 navLink.addEventListener("click", (event) => {
     navLink.style.background = "purple";
     navLink.style.color = "white";
