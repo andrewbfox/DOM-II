@@ -50,8 +50,10 @@ para.addEventListener('copy', (event) => {
     event.target.style.background = "green";
 })
 
-// 10. 
-
+// 10. Alert on page load
+window.addEventListener('load', (event) => {
+    alert("Page has fully loaded");
+});
 
 // Stop propagation
 const nav = document.querySelector("nav");
