@@ -1,22 +1,64 @@
 // Your code goes here
 
-// Change h1 color
+// 1. Change h1 color on mouseenter
 const headerH1 = document.querySelector("h1");
-headerH1.addEventListener("mouseover", (event) => {
+headerH1.addEventListener("mouseenter", (event) => {
     headerH1.style.color = "red";
 });
+// 2. Change h1 font family on mouseleave
 headerH1.addEventListener("mouseleave", (event) => {
-    headerH1.style.color = "green";
+    headerH1.style.color = "black";
 });
 
-// Hide image
-const headerH2 = document.querySelector("div header img");
-headerH2.addEventListener("dblclick", (event) => {
-        headerH2.style.visibility = "hidden";
+// 3. Change h2 background on mouseover
+const headerH2 = document.querySelector("header h2");
+headerH2.addEventListener("mouseover", (event) => {
+    headerH2.style.background = "red";
+});
+// 4. Change h2 background on mouseout
+headerH2.addEventListener("mouseout", (event) => {
+    headerH2.style.background = "white";
 });
 
-// Change background on copy
+// 5. Change nav link to serif on mousedown
+const navLink = document.querySelector("a");
+navLink.addEventListener("mousedown", (event) => {
+    navLink.style.fontFamily = "serif";
+});
+// 6. Change nav link to sans-serif on mouseup
+navLink.addEventListener("mouseup", (event) => {
+    navLink.style.fontFamily = "sans-serif";
+});
+// 7. 
+navLink.addEventListener("click", (event) => {
+    navLink.style.background = "purple";
+    navLink.style.color = "white";
+});
+
+
+// 8. Alert & hide image on dblclick
+const image = document.querySelector("div header img");
+image.addEventListener("dblclick", (event) => {
+    image.style.visibility = "hidden";
+    alert("The picture is about to disappear!");
+});
+
+// 9. Change background on copy
 const para = document.querySelector("p");
 para.addEventListener('copy', (event) => {
     event.target.style.background = "green";
 })
+
+// 10. 
+const webpage = document.querySelector("body");
+webpage.addEventListener("scroll", (event) => {
+    webpage.style.background = "black";
+})
+
+// Stop propagation
+
+
+// Prevent default
+navLink.addEventListener("click", (event) => {
+    event.preventDefault();
+});
